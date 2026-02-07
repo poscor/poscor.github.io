@@ -1,0 +1,42 @@
+---
+const steps = [
+	{
+		title: 'Discovery',
+		copy: 'We align on your station’s goals, streaming setup, and brand tone.'
+	},
+	{
+		title: 'Design',
+		copy: 'We craft a focused UI that feels premium and stays simple for listeners.'
+	},
+	{
+		title: 'Build',
+		copy: 'Native iOS development with CarPlay, Watch, iPad, and Mac support.'
+	},
+	{
+		title: 'Launch & Support',
+		copy: 'We handle App Store launch and keep the app running smoothly.'
+	}
+];
+---
+
+<section class="py-5" id="process">
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-lg-6">
+				<h2 class="fw-semibold">Process built for busy stations</h2>
+				<p class="text-secondary">Clear steps, quick feedback loops, and a predictable delivery.</p>
+			</div>
+		</div>
+		<div class="row g-4">
+			{steps.map((step, index) => (
+				<div class="col-12 col-md-6 col-lg-3">
+					<div class="h-100 border rounded-4 p-4">
+						<p class="text-primary fw-semibold mb-1">Step {index + 1}</p>
+						<h3 class="h5 fw-semibold">{step.title}</h3>
+						<p class="text-secondary mb-0">{step.copy}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

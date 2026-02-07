@@ -1,0 +1,47 @@
+---
+const platforms = [
+	{
+		title: 'iPhone (native iOS)',
+		copy: 'The main listening experience with a fast, polished player and metadata-rich now playing screen.'
+	},
+	{
+		title: 'iPad (native iPadOS)',
+		copy: 'Bigger screen layouts for studio and home listening sessions.'
+	},
+	{
+		title: 'CarPlay',
+		copy: 'Safe, glanceable controls that keep listeners tuned in while driving.'
+	},
+	{
+		title: 'Apple Watch',
+		copy: 'Quick access to live radio and recent tracks on the wrist.'
+	},
+	{
+		title: 'Mac (Apple Silicon)',
+		copy: 'Native app support on M-series Macs for desk and studio monitoring.'
+	}
+];
+---
+
+<section class="py-5" id="platforms">
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-lg-6">
+				<h2 class="fw-semibold">Platforms your listeners use every day</h2>
+				<p class="text-secondary">
+					One native codebase, multiple Apple platforms—all focused on a single station.
+				</p>
+			</div>
+		</div>
+		<div class="row g-4">
+			{platforms.map((platform) => (
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="border rounded-4 p-4 h-100">
+						<h3 class="h5 fw-semibold">{platform.title}</h3>
+						<p class="text-secondary mb-0">{platform.copy}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

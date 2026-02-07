@@ -1,0 +1,73 @@
+---
+const faqs = [
+	{
+		question: 'Which Apple platforms are supported?',
+		answer: 'iPhone (native iOS), iPad (native iPadOS), CarPlay, Apple Watch, and Mac with Apple Silicon.'
+	},
+	{
+		question: 'Does POSCOR build apps for multiple stations?',
+		answer: 'No. We build a premium app for one station at a time to keep the experience focused.'
+	},
+	{
+		question: 'How long does a typical launch take?',
+		answer: 'Most stations can launch in 6–10 weeks depending on approvals and content readiness.'
+	},
+	{
+		question: 'Do you handle App Store publishing?',
+		answer: 'Yes. We guide you through Apple’s requirements and submit the app on your behalf.'
+	},
+	{
+		question: 'Who owns the app and source code?',
+		answer: 'You do. The app is built specifically for your station and delivered to your account.'
+	},
+	{
+		question: 'Can you integrate our stream metadata?',
+		answer: 'Yes. Now Playing and metadata are central to the listener experience.'
+	},
+	{
+		question: 'Is the app compatible with existing streaming providers?',
+		answer: 'We work with standard streaming formats and metadata feeds used by radio stations.'
+	},
+	{
+		question: 'Can we add features later?',
+		answer: 'Absolutely. POSCOR is flexible and evolves with your station’s roadmap.'
+	}
+];
+---
+
+<section class="py-5" id="faq">
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-lg-6">
+				<h2 class="fw-semibold">Frequently asked questions</h2>
+				<p class="text-secondary">Short answers to help you evaluate fit quickly.</p>
+			</div>
+		</div>
+		<div class="accordion" id="faqAccordion">
+			{faqs.map((faq, index) => (
+				<div class="accordion-item">
+					<h3 class="accordion-header" id={`heading-${index}`}>
+						<button
+							class={`accordion-button ${index === 0 ? '' : 'collapsed'}`}
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target={`#collapse-${index}`}
+							aria-expanded={index === 0 ? 'true' : 'false'}
+							aria-controls={`collapse-${index}`}
+						>
+							{faq.question}
+						</button>
+					</h3>
+					<div
+						id={`collapse-${index}`}
+						class={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`}
+						aria-labelledby={`heading-${index}`}
+						data-bs-parent="#faqAccordion"
+					>
+						<div class="accordion-body text-secondary">{faq.answer}</div>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

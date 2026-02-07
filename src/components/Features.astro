@@ -1,0 +1,38 @@
+---
+const features = [
+	'Now Playing with live stream metadata',
+	'Rich audio player UI optimized for listeners',
+	'Song history with recent tracks',
+	'Sleep timer for hands-free listening',
+	'Optional auto-start playback',
+	'Open played songs in Apple Music',
+	'Open played songs in Spotify',
+	'Open played songs in YouTube Music',
+	'Open played songs in YouTube (video)',
+	'Open played songs in Deezer'
+];
+---
+
+<section class="py-5 bg-light" id="features">
+	<div class="container">
+		<div class="row mb-4">
+			<div class="col-lg-6">
+				<h2 class="fw-semibold">Listener features that feel premium</h2>
+				<p class="text-secondary">
+					Everything your audience expects from a modern radio app—delivered with a clean,
+					fast UI.
+				</p>
+			</div>
+		</div>
+		<div class="row g-3">
+			{features.map((feature) => (
+				<div class="col-12 col-md-6 col-lg-4">
+					<div class="d-flex gap-3 align-items-start p-3 bg-white rounded-3 border h-100">
+						<div class="text-primary fs-5" aria-hidden="true">✓</div>
+						<p class="mb-0">{feature}</p>
+					</div>
+				</div>
+			))}
+		</div>
+	</div>
+</section>

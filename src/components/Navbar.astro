@@ -1,0 +1,36 @@
+---
+const navItems = [
+	{ href: '#solutions', label: 'Solutions' },
+	{ href: '#features', label: 'Features' },
+	{ href: '#platforms', label: 'Platforms' },
+	{ href: '#process', label: 'Process' },
+	{ href: '#faq', label: 'FAQ' },
+	{ href: '#contact', label: 'Contact' }
+];
+---
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" aria-label="Primary">
+	<div class="container py-2">
+		<a class="navbar-brand fw-semibold" href="#top">POSCOR</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#poscorNav"
+			aria-controls="poscorNav"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="poscorNav">
+			<ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+				{navItems.map((item) => (
+					<li class="nav-item">
+						<a class="nav-link" href={item.href}>{item.label}</a>
+					</li>
+				))}
+			</ul>
+		</div>
+	</div>
+</nav>
