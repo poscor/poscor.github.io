@@ -6,6 +6,8 @@ const {
 	ogImage = '/images/og.png',
 } = Astro.props;
 
+import '../styles/global.css';
+
 const jsonLd = {
 	"@context": "https://schema.org",
 	"@graph": [
@@ -54,20 +56,6 @@ const jsonLd = {
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous"
 		/>
-
-		<style>
-			:root {
-				color-scheme: light;
-			}
-
-			body {
-				font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-			}
-
-			section {
-				scroll-margin-top: 6rem;
-			}
-		</style>
 
 		<script type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 	</head>
