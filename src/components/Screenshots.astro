@@ -13,7 +13,7 @@
 					<div class="carousel-item active text-center">
 						<img
 							src="/images/screen1.png"
-							class="d-block w-100"
+							class="d-block screenshot-img"
 							alt="POSCOR app now playing screen"
 							width="320"
 							height="692"
@@ -23,7 +23,7 @@
 					<div class="carousel-item text-center">
 						<img
 							src="/images/screen2.png"
-							class="d-block w-100"
+							class="d-block screenshot-img"
 							alt="POSCOR app song history screen"
 							width="320"
 							height="692"
@@ -33,7 +33,7 @@
 					<div class="carousel-item text-center">
 						<img
 							src="/images/screen3.png"
-							class="d-block w-100"
+							class="d-block screenshot-img"
 							alt="POSCOR app player controls screen"
 							width="320"
 							height="692"
@@ -68,7 +68,7 @@
 					<img
 						src="/images/screen1.png"
 						alt="POSCOR app now playing screen"
-						class="img-fluid rounded-4"
+						class="img-fluid rounded-4 screenshot-img-lg"
 						width="320"
 						height="692"
 						loading="lazy"
@@ -78,7 +78,7 @@
 					<img
 						src="/images/screen2.png"
 						alt="POSCOR app song history screen"
-						class="img-fluid rounded-4"
+						class="img-fluid rounded-4 screenshot-img-lg"
 						width="320"
 						height="692"
 						loading="lazy"
@@ -88,7 +88,7 @@
 					<img
 						src="/images/screen3.png"
 						alt="POSCOR app player controls screen"
-						class="img-fluid rounded-4"
+						class="img-fluid rounded-4 screenshot-img-lg"
 						width="320"
 						height="692"
 						loading="lazy"
@@ -98,3 +98,19 @@
 		</div>
 	</div>
 </section>
+
+<style>
+	.screenshot-img {
+		width: 100%;
+		max-width: min(360px, 90vw);
+		height: auto;
+		object-fit: contain;
+		margin: 0 auto;
+	}
+
+	.screenshot-img-lg {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+</style>
