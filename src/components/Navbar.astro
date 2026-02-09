@@ -11,7 +11,10 @@ const navItems = [
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top" aria-label="Primary">
 	<div class="container py-2">
-		<a class="navbar-brand fw-semibold" href="#top">POSCOR</a>
+		<a class="navbar-brand fw-semibold d-inline-flex align-items-center gap-2" href="#top">
+			<img src="/poscor-logo-32.png" alt="POSCOR" width="28" height="28" class="navbar-logo" />
+			<span>POSCOR</span>
+		</a>
 		<button
 			class="navbar-toggler"
 			type="button"
@@ -34,3 +37,12 @@ const navItems = [
 		</div>
 	</div>
 </nav>
+
+<style>
+	.navbar-logo {
+		height: 28px;
+		width: 28px;
+		object-fit: contain;
+		border-radius: 6px;
+	}
+</style>

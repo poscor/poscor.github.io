@@ -3,7 +3,7 @@ const {
 	title = 'POSCOR — Native iOS app for a radio station',
 	description = 'POSCOR builds a premium native iOS app for a single radio station, with CarPlay, Apple Watch, iPad, and Mac (Apple Silicon) support.',
 	canonical = 'https://poscor.github.io/',
-	ogImage = '/images/og.png',
+	ogImage = '/poscor-logo-1024.png',
 } = Astro.props;
 
 import '../styles/global.css';
@@ -32,7 +32,13 @@ const jsonLd = {
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonical} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="robots" content="index, follow" />
+		<meta name="theme-color" content="#ffffff" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="icon" type="image/png" sizes="1024x1024" href="/poscor-logo-1024.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/poscor-logo-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/poscor-logo-16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 		<link rel="icon" href="/favicon.ico" />
 
 		<title>{title}</title>
@@ -41,6 +47,7 @@ const jsonLd = {
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content="https://poscor.github.io/" />
+		<meta property="og:site_name" content="POSCOR" />
 		<meta property="og:image" content={ogImage} />
 
 		<meta name="twitter:card" content="summary_large_image" />
